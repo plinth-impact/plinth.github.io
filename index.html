@@ -8,90 +8,261 @@
 <body>
 <x-dc>
 <helmet>
+<link rel="stylesheet" href="_ds/industry-1f3d64e5-ba31-4012-8e83-139e5543b789/styles.css">
+<script src="_ds/industry-1f3d64e5-ba31-4012-8e83-139e5543b789/_ds_bundle.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=Fraunces:opsz,wght@9..144,400;9..144,600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=Fraunces:opsz,wght@9..144,400;9..144,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
   body { margin: 0; background: #FFFFFF; }
+  a { color: #000000; text-decoration: none; }
+  a:hover { color: #EF5400; }
+  input, select, textarea { font: inherit; }
 </style>
 </helmet>
 
-<div style="background: #FFFFFF; color: #000000; font-family: Helvetica, Arial, sans-serif; padding: 64px; max-width: 1240px; margin: 0 auto;">
+<div style="--chn-accent: {{ accent }}; --color-divider: rgba(0,0,0,0.2); background: #FFFFFF; color: #000000; font-family: 'IBM Plex Sans', system-ui, sans-serif;">
 
-  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #EF5400; margin-bottom: 16px;">Plinth / CHN — visual tokens</div>
-  <h1 style="font-family: Raleway, sans-serif; font-weight: 800; font-size: 56px; line-height: 0.92; letter-spacing: -0.04em; margin: 0 0 56px;">Design tokens</h1>
-
-  <section style="margin-bottom: 64px;">
-    <h2 style="font-family: Raleway, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; margin: 0 0 20px; text-transform: uppercase; color: rgba(0,0,0,0.5);">Color — three total</h2>
-    <div style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0; border-top: 1px solid rgba(0,0,0,0.15);">
-      <div>
-        <div style="height: 120px; background: #FFFFFF; border: 1px solid rgba(0,0,0,0.15); border-top: none;"></div>
-        <div style="padding: 14px 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px;">White — #FFFFFF<br><span style="color: rgba(0,0,0,0.5);">Ground</span></div>
-      </div>
-      <div style="padding-left: 24px;">
-        <div style="height: 120px; background: #000000;"></div>
-        <div style="padding: 14px 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px;">Black — #000000<br><span style="color: rgba(0,0,0,0.5);">Text, inverse grounds, accent-on-white</span></div>
-      </div>
-      <div style="padding-left: 24px;">
-        <div style="height: 120px; background: #EF5400;"></div>
-        <div style="padding: 14px 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px;">Sunset — #EF5400<br><span style="color: rgba(0,0,0,0.5);">Accent-on-black, hover/press state</span></div>
-      </div>
+  <header style="display: flex; align-items: baseline; justify-content: space-between; gap: 40px; padding: 28px 64px 0; max-width: 1240px; margin: 0 auto;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <img src="assets/plinth-logo-crop.png" alt="Plinth Impact Initiative" style="height: 44px; width: auto;">
     </div>
-    <p style="margin: 24px 0 0; font-size: 14px; line-height: 1.5; max-width: 70ch; color: rgba(0,0,0,0.6);">Rule: on a white ground the accent role is black, and hover/press moves to sunset. On a black ground the accent role is sunset directly. Never both accents in one component. Mid-tone greys are expressed as black or white at reduced opacity, never a fourth hex.</p>
+    <nav style="display: flex; align-items: center; gap: 28px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;">
+      <a href="#about" style="color: #000000;" style-hover="color: var(--chn-accent, #EF5400)">About</a>
+      <a href="#work" style="color: #000000;" style-hover="color: var(--chn-accent, #EF5400)">Our Work</a>
+      <a href="#involved" style="color: #000000;" style-hover="color: var(--chn-accent, #EF5400)">Get Involved</a>
+      <a href="#contact" style="background: #000000; color: #FFFFFF; padding: 9px 16px;" style-hover="background: #EF5400; color: #FFFFFF">Contact</a>
+    </nav>
+  </header>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 92px 64px 64px; display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 72px; align-items: center; background-color: #FFFFFF">
+    <div>
+      <h1 style="font-family: Raleway; font-weight: 700; font-size: 62px; line-height: 0.82; letter-spacing: -0.05em; margin: 0 0 32px; max-width: 14ch; text-wrap: pretty; color: #000000">We<br>CONNECT Everyone.</h1>
+      
+      <p style="font-size: 20px; line-height: 1.2; max-width: 52ch; margin: 0 0 36px; color: #000000; font-family: Helvetica">Leading communities and&nbsp;Orgs<br>towards substainable impacts.</p>
+      <a href="#about" style="font-family: Inter; font-size: 18px; letter-spacing: 0em; text-transform: none; border-bottom: 1px solid #000000; padding-bottom: 3px" style-hover="color: #EF5400; border-bottom-color: #EF5400">See how it fits together →</a>
+    </div><div class="blueprint" style="padding: 24px; background: transparent;">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <svg viewBox="0 0 330 240" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: auto; display: block;" aria-label="How Plinth fits together">
+        <g stroke="rgba(0,0,0,0.32)" stroke-width="1" fill="none">
+          <line x1="165" y1="120" x2="62" y2="58"></line>
+          <line x1="165" y1="120" x2="268" y2="58"></line>
+          <line x1="165" y1="120" x2="165" y2="200"></line>
+          <line x1="62" y1="58" x2="165" y2="200" stroke-dasharray="2 4"></line>
+          <line x1="268" y1="58" x2="165" y2="200" stroke-dasharray="2 4"></line>
+        </g>
+        <circle cx="165" cy="120" r="40" fill="#000000"></circle>
+        <text x="165" y="117" text-anchor="middle" fill="#FFFFFF" font-family="Raleway, sans-serif" font-size="19" font-weight="600">Plinth</text>
+        <text x="165" y="131" text-anchor="middle" fill="rgba(255,255,255,0.72)" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="0.6">FOUNDATION</text>
+        <g fill="none" stroke="#000000" stroke-width="1">
+          <circle cx="62" cy="58" r="50"></circle>
+          <circle cx="268" cy="58" r="50"></circle>
+          <circle cx="165" cy="200" r="34"></circle>
+        </g>
+        <g fill="#000000" font-family="IBM Plex Mono, monospace" font-size="13" letter-spacing="0.4" text-anchor="middle">
+          <text x="62" y="55">COMMUNITY</text><text x="62" y="70">PROGRAMS</text>
+          <text x="268" y="55">SOCIAL</text><text x="268" y="70">ENTERPRISE</text>
+          <text x="165" y="197">PRODUCTS</text><text x="165" y="212" fill="rgba(0,0,0,0.62)" font-size="13">SHARED</text>
+        </g>
+        <g stroke="rgba(0,0,0,0.32)" stroke-width="1">
+          <line x1="10" y1="8" x2="10" y2="20"></line><line x1="4" y1="14" x2="16" y2="14"></line>
+          <line x1="322" y1="222" x2="322" y2="234"></line><line x1="316" y1="228" x2="328" y2="228"></line>
+        </g>
+      </svg>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(0,0,0,0.62); margin-top: 18px;">Community Haven Network — first product on the shared layer</div>
+    </div>
+    
   </section>
 
-  <section style="margin-bottom: 64px;">
-    <h2 style="font-family: Raleway, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; margin: 0 0 20px; text-transform: uppercase; color: rgba(0,0,0,0.5);">Type</h2>
-    <div style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 40px; border-top: 1px solid rgba(0,0,0,0.15); padding-top: 24px;">
-      <div>
-        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(0,0,0,0.5); margin-bottom: 12px;">Headings — Raleway 700/800</div>
-        <div style="font-family: Raleway, sans-serif; font-weight: 800; font-size: 46px; letter-spacing: -0.04em; line-height: 0.95;">Aa Bb Cc</div>
-        <div style="font-family: Raleway, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.03em; margin-top: 8px;">Tight tracking, near-black</div>
+  <section id="about" style="max-width: 1240px; margin: 0 auto; padding: 56px 64px 96px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #000000; margin-bottom: 40px;">What we do</div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid rgba(0,0,0,0.2);">
+      <div style="padding: 36px 40px 36px 0; border-right: 1px solid rgba(0,0,0,0.2);">
+        <h3 style="font-family: Raleway, sans-serif; font-weight: 700; font-size: 24px; letter-spacing: -0.03em; color: #000000; margin: 0 0 14px;">Community Programs</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.2; color: #000000; font-family: Helvetica, Arial, sans-serif;">The people-facing work, one program per community need.</p>
       </div>
-      <div>
-        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(0,0,0,0.5); margin-bottom: 12px;">Body — Helvetica / IBM Plex Sans</div>
-        <div style="font-family: Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.2; max-width: 46ch;">Set body copy tight — 1.2 line-height, no letter-spacing. Reads as a technical document, not a magazine.</div>
+      <div style="padding: 36px 40px; border-right: 1px solid rgba(0,0,0,0.2);">
+        <h3 style="font-family: Raleway, sans-serif; font-weight: 700; font-size: 24px; letter-spacing: -0.03em; color: #000000; margin: 0 0 14px;">Social Enterprise</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.2; color: #000000; font-family: Helvetica, Arial, sans-serif;">Qworky, the commercial arm that keeps the lights on.</p>
       </div>
-      <div>
-        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(0,0,0,0.5); margin-bottom: 12px;">Labels / data — IBM Plex Mono</div>
-        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase;">Section kickers · nav · buttons</div>
-      </div>
-      <div>
-        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(0,0,0,0.5); margin-bottom: 12px;">Stat numerals — Fraunces</div>
-        <div style="font-family: Fraunces; font-size: 46px; letter-spacing: -0.02em">41,600</div>
-      </div>
-    </div>
-  </section>
-
-  <section style="margin-bottom: 64px;">
-    <h2 style="font-family: Raleway, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; margin: 0 0 20px; text-transform: uppercase; color: rgba(0,0,0,0.5);">Devices</h2>
-    <div style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 28px; border-top: 1px solid rgba(0,0,0,0.15); padding-top: 24px;">
-      <div style="border: 1px solid rgba(0,0,0,0.3); padding: 20px; position: relative;">
-        <i style="position: absolute; top: -1px; left: -1px; width: 10px; height: 10px; border-top: 1px solid #000; border-left: 1px solid #000;"></i>
-        <i style="position: absolute; top: -1px; right: -1px; width: 10px; height: 10px; border-top: 1px solid #000; border-right: 1px solid #000;"></i>
-        <i style="position: absolute; bottom: -1px; left: -1px; width: 10px; height: 10px; border-bottom: 1px solid #000; border-left: 1px solid #000;"></i>
-        <i style="position: absolute; bottom: -1px; right: -1px; width: 10px; height: 10px; border-bottom: 1px solid #000; border-right: 1px solid #000;"></i>
-        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(0,0,0,0.5);">Blueprint card</div>
-        <div style="font-size: 14px; margin-top: 8px;">Hairline frame, square corners, four crosshair marks.</div>
-      </div>
-      <div style="background: #000000; color: #FFFFFF; padding: 20px;">
-        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55);">Stat card</div>
-        <div style="font-family: Fraunces, serif; font-size: 34px; margin-top: 8px;">86%</div>
-      </div>
-      <div style="padding: 20px; border: 1px solid rgba(0,0,0,0.15);">
-        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(0,0,0,0.5);">Bubble-cluster</div>
-        <svg viewBox="0 0 140 80" style="width: 100%; margin-top: 8px;">
-          <circle cx="70" cy="40" r="16" fill="#000000"></circle>
-          <circle cx="24" cy="18" r="12" fill="none" stroke="#EF5400"></circle>
-          <circle cx="116" cy="18" r="12" fill="none" stroke="#EF5400"></circle>
-          <circle cx="70" cy="68" r="10" fill="none" stroke="#EF5400"></circle>
-        </svg>
+      <div style="padding: 36px 0 36px 40px;">
+        <h3 style="font-family: Raleway, sans-serif; font-weight: 700; font-size: 24px; letter-spacing: -0.03em; color: #000000; margin: 0 0 14px;">Products</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.2; color: #000000; font-family: Helvetica, Arial, sans-serif;">The shared tools every program and partner uses, built once, reused everywhere.</p>
       </div>
     </div>
   </section>
 
-  <footer style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(0,0,0,0.5); border-top: 1px solid rgba(0,0,0,0.15); padding-top: 24px;">Plinth Initiative / By Plinth Initiative</footer>
+  <section id="impact" style="background: #000000; color: #FFFFFF; padding: 88px 0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 64px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 32px; margin-bottom: 44px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.72);">Impact to date</div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF; background: #EF5400; padding: 5px 10px;">Figures TBD</div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid rgba(255,255,255,0.24);">
+        <div style="padding: 40px 40px 40px 0; border-right: 1px solid rgba(255,255,255,0.24);">
+          <div style="font-family: 'Fraunces', serif; font-weight: 400; font-size: 84px; line-height: 1; letter-spacing: -0.02em; color: rgba(255,255,255,0.45);">[ ]</div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.72); margin-top: 18px;">People reached</div>
+        </div>
+        <div style="padding: 40px; border-right: 1px solid rgba(255,255,255,0.24);">
+          <div style="font-family: 'Fraunces', serif; font-weight: 400; font-size: 84px; line-height: 1; letter-spacing: -0.02em; color: rgba(255,255,255,0.45);">[ ]</div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.72); margin-top: 18px;">Screenings run</div>
+        </div>
+        <div style="padding: 40px 0 40px 40px;">
+          <div style="font-family: 'Fraunces', serif; font-weight: 400; font-size: 84px; line-height: 1; letter-spacing: -0.02em; color: rgba(255,255,255,0.45);">[ ]</div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.72); margin-top: 18px;">Survey completions</div>
+        </div>
+      </div>
+      <p style="margin: 28px 0 0; font-size: 14px; line-height: 1.2; color: rgba(255,255,255,0.72); font-family: Helvetica, Arial, sans-serif; max-width: 62ch;">Every number here traces back to a real screening, workshop, or outreach session, logged the day it happened.</p>
+    </div>
+  </section>
+
+  <section id="work" style="max-width: 1240px; margin: 0 auto; padding: 96px 64px 64px;">
+    <div style="display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 72px; align-items: start;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #000000; margin-bottom: 24px;">Our work</div>
+        <h2 style="font-family: Raleway, sans-serif; font-weight: 700; font-size: 42px; line-height: 0.9; letter-spacing: -0.05em; color: #000000; margin: 0 0 20px; max-width: 16ch;">Community Programs</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.2; color: #000000; font-family: Helvetica, Arial, sans-serif; max-width: 36ch;">Each program answers one specific community need. None of them carry the Plinth name out front.</p>
+      </div>
+      <div style="display: grid; gap: 28px;">
+        <div class="blueprint" style="padding: 36px; background: #FFFFFF; display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 32px; align-items: start;">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="aspect-ratio: 4 / 3; background: rgba(0,0,0,0.1); display: grid; place-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #000000;">Photo</div>
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(0,0,0,0.62); margin-bottom: 10px;">CPI</div>
+            <h3 style="font-family: Raleway, sans-serif; font-weight: 700; font-size: 26px; letter-spacing: -0.03em; color: #000000; margin: 0 0 14px;">Community Pathways Initiative</h3>
+            <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.2; color: #000000; font-family: Helvetica, Arial, sans-serif;">Haircuts, computer classes, and outreach for refugee and underserved communities in Kuala Lumpur. Built on the idea that psychosocial wellbeing isn't separate from practical support, it's underneath all of it.</p>
+            <a href="chn-landing.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 1px solid #000000; padding-bottom: 2px;" style-hover="color: #EF5400; border-bottom-color: #EF5400">Visit CPI →</a>
+          </div>
+        </div>
+        <div style="padding: 24px 0 0; border-top: 1px solid rgba(0,0,0,0.2); display: flex; gap: 20px; align-items: baseline;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF; background: #EF5400; padding: 5px 10px; white-space: nowrap;">TBD</span>
+          <p style="margin: 0; font-size: 15px; line-height: 1.2; color: #000000; font-family: Helvetica, Arial, sans-serif; max-width: 56ch;">Additional Community Programs. Names and scope are not confirmed, so nothing is published here yet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 64px 64px 32px;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 32px; margin-bottom: 32px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #000000;">Partners and funders</div>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF; background: #EF5400; padding: 5px 10px;">Names TBD</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px;">
+      <div style="aspect-ratio: 5 / 2; background: rgba(0,0,0,0.1);"></div>
+      <div style="aspect-ratio: 5 / 2; background: rgba(0,0,0,0.1);"></div>
+      <div style="aspect-ratio: 5 / 2; background: rgba(0,0,0,0.1);"></div>
+      <div style="aspect-ratio: 5 / 2; background: rgba(0,0,0,0.1);"></div>
+      <div style="aspect-ratio: 5 / 2; background: rgba(0,0,0,0.1);"></div>
+    </div>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 56px 64px 96px;">
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; border-top: 1px solid rgba(0,0,0,0.2);">
+      <div style="padding: 36px 40px 36px 0; border-right: 1px solid rgba(0,0,0,0.2);">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(0,0,0,0.62); margin-bottom: 12px;">Funding and accounts — TBD</div>
+        <h3 style="font-family: Raleway, sans-serif; font-weight: 700; font-size: 24px; letter-spacing: -0.03em; color: #000000; margin: 0 0 12px;">Where the money comes from</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.2; color: #000000; font-family: Helvetica, Arial, sans-serif; max-width: 44ch;">Sources, split, and the share carried by the social enterprise. Awaiting confirmed figures.</p>
+      </div>
+      <div style="padding: 36px 0 36px 40px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(0,0,0,0.62); margin-bottom: 12px;">Annual report — TBD</div>
+        <h3 style="font-family: Raleway, sans-serif; font-weight: 700; font-size: 24px; letter-spacing: -0.03em; color: #000000; margin: 0 0 12px;">Read the year in full</h3>
+        <p style="margin: 0 0 20px; font-size: 15px; line-height: 1.2; color: #000000; font-family: Helvetica, Arial, sans-serif; max-width: 44ch;">Programs, reach, and accounts in one document.</p>
+        <a href="#contact" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid rgba(0,0,0,0.28); padding: 13px 22px; display: inline-block; color: #000000;" style-hover="background: rgba(0,0,0,0.06)">Request the report</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="involved" style="max-width: 1240px; margin: 0 auto; padding: 0 64px 96px; background-color: #FFFFFF; display: block;">
+    <div style="margin-bottom: 44px;">
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #000000; margin-bottom: 24px;">Get involved</div>
+    <h2 style="font-family: Raleway, sans-serif; font-weight: 700; font-size: 42px; line-height: 0.9; letter-spacing: -0.05em; color: #000000; margin: 0 0 16px; max-width: 18ch;">Get involved</h2>
+    <p style="margin: 0; font-size: 17px; line-height: 1.2; color: #000000; font-family: Helvetica, Arial, sans-serif; max-width: 34ch;">However much time or support you have, there's a real door in.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px;">
+      <div class="blueprint" style="padding: 32px; background: transparent; display: flex; flex-direction: column; gap: 14px;">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <h3 style="font-family: Raleway, sans-serif; font-weight: 700; font-size: 22px; margin: 0; letter-spacing: -0.03em; color: #000000;">Individuals</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.2; color: #000000; font-family: Helvetica, Arial, sans-serif;">Volunteer time, skills, or attention.</p>
+        <a href="#contact" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin-top: auto; color: #000000;" style-hover="color: #EF5400">Get involved →</a>
+      </div>
+      <div class="blueprint" style="padding: 32px; background: transparent; display: flex; flex-direction: column; gap: 14px;">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <h3 style="font-family: Raleway, sans-serif; font-weight: 700; font-size: 22px; margin: 0; letter-spacing: -0.03em; color: #000000;">Organizations</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.2; color: #000000; font-family: Helvetica, Arial, sans-serif;">Partner, fund, or collaborate on a program.</p>
+        <a href="#contact" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin-top: auto; color: #000000;" style-hover="color: #EF5400">Partner with us →</a>
+      </div>
+      <div class="blueprint" style="padding: 32px; background: transparent; display: flex; flex-direction: column; gap: 14px;">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <h3 style="font-family: Raleway, sans-serif; font-weight: 700; font-size: 22px; margin: 0; letter-spacing: -0.03em; color: #000000;">Everyone else</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.2; color: #000000; font-family: Helvetica, Arial, sans-serif;">Follow the work, share it, or just know it exists.</p>
+        <a href="#contact" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin-top: auto; color: #000000;" style-hover="color: #EF5400">Follow our work →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="max-width: 1240px; margin: 0 auto; padding: 0 64px 96px; background-color: #000000;">
+    <div class="blueprint" style="padding: 56px; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); gap: 64px; align-items: start; background-color: #000000; border-color: rgba(255,255,255,0.28); color: rgba(255,255,255,0.55);">
+      <i class="corner tl" style="color: rgba(255,255,255,0.55)"></i><i class="corner tr" style="color: rgba(255,255,255,0.55)"></i><i class="corner bl" style="color: rgba(255,255,255,0.55)"></i><i class="corner br" style="color: rgba(255,255,255,0.55)"></i>
+      <div>
+        <p style="margin: 0 0 24px; font-size: 21px; line-height: 1.2; color: #FFFFFF7B; font-family: Helvetica, Arial, sans-serif; max-width: 40ch;">Tell us what you're considering</p>
+        <h2 style="font-family: Raleway, sans-serif; font-weight: 700; font-size: 42px; line-height: 0.92; letter-spacing: -0.05em; color: #FFFFFF; margin: 0 0 16px; max-width: 18ch;">Partnership and funding enquiries</h2>
+        <p style="margin: 0; font-size: 15px; line-height: 1.75; color: #FFFFFF84; font-family: Helvetica, Arial, sans-serif; max-width: 40ch;">A community organisation wanting to join <br>the network please registers on <br><a href="chn-landing.html" style="color: #EF5400; font-family: Raleway, sans-serif; font-weight: 700;">Community Haven Network</a>.</p>
+      </div>
+      <form onSubmit="{{ onSubmit }}" style="display: grid; gap: 22px;">
+        <label style="display: grid; gap: 8px;">
+          <span style="font-family: Inter, sans-serif; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF;">I'm writing about</span>
+          <select style="padding: 13px 14px; border: 1px solid rgba(0,0,0,0.28); background: #FFFFFF; color: #000000; border-radius: 0;">
+            <option>Funding or grants</option>
+            <option>Institutional partnership</option>
+            <option>Government or policy</option>
+            <option>Programme collaboration</option>
+            <option>Media or press</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px;">
+          <label style="display: grid; gap: 8px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF;">Organisation</span>
+            <input type="text" style="padding: 13px 14px; border: 1px solid rgba(0,0,0,0.28); background: #FFFFFF; color: #000000; border-radius: 0;">
+          </label>
+          <label style="display: grid; gap: 8px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF;">Your name</span>
+            <input type="text" style="padding: 13px 14px; border: 1px solid rgba(0,0,0,0.28); background: #FFFFFF; color: #000000; border-radius: 0;">
+          </label>
+        </div>
+        <label style="display: grid; gap: 8px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF;">Email</span>
+          <input type="email" style="padding: 13px 14px; border: 1px solid rgba(0,0,0,0.28); background: #FFFFFF; color: #000000; border-radius: 0;">
+        </label>
+        <label style="display: grid; gap: 8px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF;">What are you considering?</span>
+          <textarea rows="4" style="padding: 13px 14px; border: 1px solid rgba(0,0,0,0.28); background: #FFFFFF; color: #000000; border-radius: 0; resize: vertical;"></textarea>
+        </label>
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <button type="submit" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF; border: 0; padding: 16px 28px; cursor: pointer; background-color: #EF5400;" style-hover="background: #EF5400">Send enquiry</button>
+          <span style="font-size: 14px; color: #FFFFFFB0;">{{ statusText }}</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer style="max-width: 1240px; margin: 0 auto; padding: 40px 64px 64px; display: flex; justify-content: space-between; align-items: baseline; gap: 32px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.72); background-color: #000000;">
+    <span>Plinth Initiative</span>
+    <span style="display: flex; gap: 24px;"><a href="chn-landing.html" style="color: #FFFFFF;">Community Haven Network</a><span>Kuala Lumpur</span></span>
+  </footer>
 </div>
 </x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#EF5400&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#EF5400&quot;,&quot;#000000&quot;,&quot;#FFFFFF&quot;]}}">
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    return {
+      accent: this.props.accent ?? '#EF5400',
+      statusText: this.state.sent ? "Thanks — we'll be in touch as soon as we can." : '',
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
 </body>
 </html>
